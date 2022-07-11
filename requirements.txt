@@ -1,0 +1,9 @@
+fastapi==0.78.0
+numpy==1.23.0
+nvidia_ml_py==11.515.48
+opencv_python==4.6.0.66
+Pillow==9.2.0
+pydantic==1.9.1
+pynvml==11.4.1
+streamlit==1.10.0
+uvicorn==0.18.2
