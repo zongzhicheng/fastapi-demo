@@ -4,6 +4,7 @@
 @Describe: 
 """
 from pydantic import BaseModel
+import os
 
 
 class ProjectConfigs(BaseModel):
@@ -11,6 +12,8 @@ class ProjectConfigs(BaseModel):
     PROJECT_NAME: str = '基础设施巡检算法平台'
     ENV_MODE: str = "DEV"
     API_PREFIX: str = "/algorithm_platform/api"
+    BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
+    LOG_DIR = "logs"
 
 
 class DevConfigs(BaseModel):
@@ -25,3 +28,8 @@ class ProConfigs(ProjectConfigs):
         开发环境配置文件（内网）
     """
     application: ProjectConfigs = ProjectConfigs(ENV_MODE="PRO")
+
+
+if __name__ == '__main__':
+    pro = ProjectConfigs()
+    print(pro.BASE_DIR)

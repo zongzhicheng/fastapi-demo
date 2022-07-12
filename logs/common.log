@@ -1,0 +1,5 @@
+2022-07-12 17:32:47 |ERROR| |main:get_application:31| - Traceback (most recent call last):
+  File "/mnt/d/PyCharm 2020.1.3/workspace/fastapi-demo/./main.py", line 25, in get_application
+    common_logger.info(f"{Configs.application.PROJECT_NAM}已启动")
+AttributeError: 'ProjectConfigs' object has no attribute 'PROJECT_NAM'
+
